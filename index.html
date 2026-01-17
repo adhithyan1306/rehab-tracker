@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Rehab Tracker</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* GLOBAL -----------------------------------------------------------*/
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #020d18, #041a32, #053a78);
+            background-size: 200% 200%;
+            animation: bgMove 12s ease infinite;
+            color: white;
+        }
+
+        @keyframes bgMove {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* NAVBAR -----------------------------------------------------------*/
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 40px;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .neon {
+            color: #00aaff;
+            text-shadow: 0 0 8px #00aaff;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #d4d4d4;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00c8ff;
+            text-shadow: 0 0 8px #00c8ff;
+        }
+
+        /* HERO -----------------------------------------------------------*/
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            padding: 80px 60px;
+            align-items: center;
+        }
+
+        .glow-title {
+            font-size: 55px;
+            font-weight: 700;
+            text-shadow: 0 0 10px #00aaff, 0 0 20px #0090dd;
+        }
+
+        .subtitle {
+            max-width: 500px;
+            font-size: 18px;
+            color: #d6eaff;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+
+        /* BUTTONS -----------------------------------------------------------*/
+        .btn-group {
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            padding: 14px 26px;
+            background: #00aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-right: 12px;
+            box-shadow: 0 0 12px #0084d1;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #00c0ff;
+            box-shadow: 0 0 18px #00c0ff;
+        }
+
+        .btn-secondary {
+            padding: 12px 24px;
+            border: 2px solid #00aaff;
+            color: #00aaff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-secondary:hover {
+            color: #02141f;
+            background: #00c0ff;
+            box-shadow: 0 0 14px #00c0ff;
+        }
+
+        /* HERO IMAGE -----------------------------------------------------------*/
+        .hero-img {
+            width: 45%;
+            border-radius: 14px;
+            box-shadow: 0 0 20px #0090dd;
+            opacity: 0;
+            transform: translateX(40px);
+            animation: slideIn 1.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        /* FADE-IN TEXT -----------------------------------------------------------*/
+        .hero-text {
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* FOOTER -----------------------------------------------------------*/
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #a0c6e8;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVE -----------------------------------------------------------*/
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-img {
+                width: 75%;
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Rehab<span class="neon">Track</span></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1 class="glow-title">Smart Rehab Tracker</h1>
+        <p class="subtitle">
+            A futuristic movement-tracking system powered by ESP32, IMU sensors, OLED displays,
+            and modern WiFi control.
+        </p>
+
+        <div class="btn-group">
+            <a href="http://192.168.4.1" class="btn-primary">Connect to Device</a>
+            <a href="features.html" class="btn-secondary">Learn More</a>
+        </div>
+    </div>
+
+    <img src="img/hero-neon-tech.jpg" class="hero-img" alt="Rehab Device Hero">
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Smart Rehab Tracker | Neon Tech Edition
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehab Tracker – Features</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #020d18, #041a32, #053a78);
+            background-size: 200% 200%;
+            animation: bgMove 12s ease infinite;
+            color: white;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 40px;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .neon {
+            color: #00aaff;
+            text-shadow: 0 0 8px #00aaff;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #d4d4d4;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00c8ff;
+            text-shadow: 0 0 8px #00c8ff;
+        }
+
+        /* PAGE TITLE */
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            margin-top: 40px;
+            text-shadow: 0 0 10px #00aaff;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            padding: 40px 60px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 14px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 0 14px rgba(0, 170, 255, 0.3);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 22px rgba(0, 170, 255, 0.5);
+        }
+
+        .card img {
+            width: 90%;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            box-shadow: 0 0 15px #0088cc;
+        }
+
+        .card h3 {
+            margin: 10px 0 8px 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #beddf7;
+            font-size: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #a0c6e8;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">Rehab<span class="neon">Track</span></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+    </nav>
+</header>
+
+<h1 class="page-title">Device Components</h1>
+
+<section class="grid">
+
+    <div class="card">
+        <img src="img/esp32-neon.jpg" alt="ESP32 Module">
+        <h3>ESP32 Core</h3>
+        <p>The brain of your device. Handles sensor reading, OLED UI, WiFi hosting, and button logic.</p>
+    </div>
+
+    <div class="card">
+        <img src="img/oled-neon.jpg" alt="OLED Display">
+        <h3>0.96” OLED Display</h3>
+        <p>Displays reps, angles, targets, menus, and session details in a crisp neon UI.</p>
+    </div>
+
+    <div class="card">
+        <img src="img/mpu6050-neon.jpg" alt="IMU Sensor">
+        <h3>MPU-6050 IMU</h3>
+        <p>Tracks motion, angle, tilt, and movement precision with its accelerometer + gyroscope.</p>
+    </div>
+
+    <div class="card">
+        <img src="img/buzzer-neon.jpg" alt="Active Buzzer">
+        <h3>Active Buzzer</h3>
+        <p>Audio feedback for reps, targets reached, and menu navigation signals.</p>
+    </div>
+
+    <div class="card">
+        <img src="img/tactile-buttons-neon.jpg" alt="Buttons">
+        <h3>Tactile Buttons</h3>
+        <p>UP, DOWN, LEFT, RIGHT & SELECT — navigate menus and control the device easily.</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Smart Rehab Tracker | Features Page
+</footer>
+
+</body>
+</html>
