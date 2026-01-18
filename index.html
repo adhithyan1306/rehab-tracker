@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Rehab Tracker</title>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -17,6 +16,7 @@
             background-size: 200% 200%;
             animation: bgMove 12s ease infinite;
             color: white;
+            overflow-x: hidden;
         }
 
         @keyframes bgMove {
@@ -62,20 +62,22 @@
             justify-content: space-between;
             padding: 80px 60px;
             align-items: center;
+            min-height: 70vh;
         }
 
         .glow-title {
             font-size: 55px;
             font-weight: 700;
             text-shadow: 0 0 10px #00aaff, 0 0 20px #0090dd;
+            margin-bottom: 10px;
         }
 
         .subtitle {
             max-width: 500px;
             font-size: 18px;
             color: #d6eaff;
-            margin-top: -10px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            line-height: 1.6;
         }
 
         /* BUTTONS -----------------------------------------------------------*/
@@ -93,11 +95,13 @@
             margin-right: 12px;
             box-shadow: 0 0 12px #0084d1;
             transition: 0.3s;
+            display: inline-block;
         }
 
         .btn-primary:hover {
             background: #00c0ff;
-            box-shadow: 0 0 18px #00c0ff;
+            box-shadow: 0 0 20px #00c0ff;
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
@@ -108,6 +112,7 @@
             border-radius: 6px;
             font-weight: 600;
             transition: 0.3s;
+            display: inline-block;
         }
 
         .btn-secondary:hover {
@@ -120,7 +125,7 @@
         .hero-img {
             width: 45%;
             border-radius: 14px;
-            box-shadow: 0 0 20px #0090dd;
+            box-shadow: 0 0 30px rgba(0, 170, 255, 0.4);
             opacity: 0;
             transform: translateX(40px);
             animation: slideIn 1.3s ease forwards;
@@ -146,10 +151,11 @@
         /* FOOTER -----------------------------------------------------------*/
         footer {
             text-align: center;
-            padding: 25px;
+            padding: 40px;
             color: #a0c6e8;
             font-size: 14px;
             margin-top: 40px;
+            border-top: 1px solid rgba(0, 170, 255, 0.1);
         }
 
         /* RESPONSIVE -----------------------------------------------------------*/
@@ -157,19 +163,21 @@
             .hero {
                 flex-direction: column;
                 text-align: center;
+                padding: 40px 20px;
             }
 
             .hero-img {
-                width: 75%;
-                margin-top: 40px;
+                width: 85%;
+                margin-top: 50px;
             }
+            
+            .glow-title { font-size: 38px; }
         }
     </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
     <div class="logo">Rehab<span class="neon">Track</span></div>
     <nav>
@@ -179,7 +187,6 @@
     </nav>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
     <div class="hero-text">
         <h1 class="glow-title">Smart Rehab Tracker</h1>
@@ -189,7 +196,7 @@
         </p>
 
         <div class="btn-group">
-            <a href="http://10.54.7.96" class="btn-primary">Connect to Device</a>
+            <a href="http://10.54.7.96" target="_blank" class="btn-primary">Connect to Device</a>
             <a href="features.html" class="btn-secondary">Learn More</a>
         </div>
     </div>
@@ -197,9 +204,9 @@
     <img src="img/hero-neon-tech.jpg" class="hero-img" alt="Rehab Device Hero">
 </section>
 
-<!-- FOOTER -->
 <footer>
-    © 2026 Smart Rehab Tracker | Neon Tech Edition
+    © 2026 Smart Rehab Tracker | Neon Tech Edition <br>
+    <small style="opacity: 0.6;">Ensure your computer is connected to the "Adhithyan" hotspot to use the device.</small>
 </footer>
 
 </body>
